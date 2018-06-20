@@ -36,7 +36,7 @@
         {console.log("działa");});
     } 
 
- /*function Planet (params) {
+ /* function Planet (params) {
             
             this.mass = params.mass;
             this.diameter = params.diameter;
@@ -91,4 +91,4 @@
             planets[i].onmouseover = planets[i].stopAnimation();
             planets[i].onclick=showPlanetInfo();
         }}
- 
+ */

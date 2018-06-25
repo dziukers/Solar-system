@@ -1,5 +1,5 @@
 body,html {
-    background:black;
+    background: black;
     margin:0;
     padding:0;
     box-sizing: border-box;
@@ -8,6 +8,7 @@ body,html {
     overflow: hidden;
     display: flex;
     justify-content: center;
+    font-family: 'Electrolize', sans-serif;
 }
 #imgsun,#imgmercury,#imgvenus,#imgearth,#imgmars{
     cursor: pointer;
@@ -18,7 +19,6 @@ body,html {
 }
 #imgsun{
     opacity:0.5;
-    z-index: 1;
 }
 .orbit-position{
     position:absolute;
@@ -26,7 +26,9 @@ body,html {
     left:50%;
     transform:translate(-50%,-50%);
     border-radius: 40%;
+    z-index: 3;
 }
+
 
 .orbit-view{
     width:100%;
@@ -36,6 +38,7 @@ body,html {
     transition: all 0.5s ease-in-out;
     perspective: 600px;
    transform: perspective(600px) rotateY(35deg) rotateX(35deg); 
+    z-index: 3;
 }
 
 #mercury{
@@ -106,18 +109,38 @@ body,html {
     width:1.5vh;
     height:1.5vh;
 }
-
-#info {
+#info-container{
     position:absolute;
     top:0%;
     left:50%;
     margin:50px;
-    width:0%;
-    height:70%;
-    background-size: 60%;
-    background-position: top;
+    width:20%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity:0;
 }
-
+#info {
+    
+    width:100%;
+    height:50%;
+    background-size:60%;
+    background-position: top;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+#parameters {
+    height:50%;
+    color:white;
+    line-height: 2;
+}
+h1 {
+    color:white;
+    
+}
 .sun-info {
     background: url("sun-min.png") no-repeat;}
 .mercury-info {
@@ -129,19 +152,20 @@ body,html {
 }.mars-info {
     background: url("mars-min.png") no-repeat;
 }
+
 @keyframes rotate{
     0% {transform:rotate(0deg);}
     100% {transform:rotate(360deg);}
 }
 @keyframes info-box
 {
-    0% {width:0%}
-    100% {width:30%}
+    0% { opacity:0;}
+    100% { opacity:1;}
 }
 @keyframes info-box-back
 {
-    0% {width:30%}
-    100% {width:0%}
+    0% {opacity:0;}
+    100% {opacity:0;}
 }
 @keyframes moveLeft{
     0% {left:50%}

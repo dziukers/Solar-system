@@ -144,7 +144,7 @@ hr{
     height:50%;
     color: transparent;
     background: linear-gradient(120deg, #46858d, rgb(221, 220, 220));
-    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     line-height: 2;
     text-align: center;
@@ -153,7 +153,7 @@ hr{
     text-align: center;
     color: transparent;
   background: linear-gradient(180deg, #741515, rgb(132, 151, 23));
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 h1 {
